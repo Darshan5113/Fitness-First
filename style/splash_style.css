@@ -1,0 +1,35 @@
+.splash-screen {
+    position: fixed;
+    z-index: 9999;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 3.375s;
+    font-family: "Monaco", Monospace;
+  }
+
+  .loader {
+    margin-top: 10px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #000000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: loading 2s linear infinite;
+  }
+
+  @keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  h3 {
+    text-align: center;
+    width: 30%;
+  }

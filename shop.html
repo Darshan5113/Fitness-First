@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<title>Fitness First | Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+</link>
+
+<link rel="stylesheet" href="./style/shop.css">
+
+<script src="./script/shop.js"></script>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-com">
+            <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+            <a href="./home.html" class="logo">Fitness First</a>
+        </div>
+        <div class="header-right">
+            <a id="header_home_menu" href="./home.html">Home</a>
+            <a id="header_shop_menu" href="./shop.html">Shop</a>
+            <a id="header_gallery_menu" href="./gallery.html">Gallary</a>
+            <a id="header_feedback_menu" href="./feedback.html">Feedback</a>
+            <a id="header_team_menu" href="./team.html">Team</a>
+            <a id="header_sitemap_menu" href="./sitemap.html">Site-Map</a>
+            <a id="header_checkout_menu" href="./checkout.html">
+                Cart
+                <svg class="cart_icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0" y="0" viewBox="0 0 16 16"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                    <g>
+                        <text id="item_count" x="12" y="7" font-size="7px" font-weight="bold" text-anchor="middle"
+                            fill="#000000">0</text>
+                        <circle cx="6.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+                        <circle cx="11.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+                        <path
+                            d="M8.051 4H3.342l-.184-.829A1.487 1.487 0 0 0 1.697 2H.5a.5.5 0 0 0 0 1h1.197c.234 0 .434.16.484.389l1.656 7.438c.155.69.757 1.173 1.465 1.173h7.444c.666 0 1.259-.447 1.442-1.088l1.122-3.926A4.457 4.457 0 0 1 12.5 8c-2.31 0-4.197-1.756-4.449-4z"
+                            fill="#000000" opacity="1" data-original="#000000"></path>
+                    </g>
+                </svg>
+            </a>
+            <a id="header_userProfile_menu" href="./userProfile.html">
+                User Profile
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30" height="30" x="0" y="0" viewBox="0 0 45.532 45.532"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M22.766.001C10.194.001 0 10.193 0 22.766s10.193 22.765 22.766 22.765c12.574 0 22.766-10.192 22.766-22.765S35.34.001 22.766.001zm0 6.807a7.53 7.53 0 1 1 .001 15.06 7.53 7.53 0 0 1-.001-15.06zm-.005 32.771a16.708 16.708 0 0 1-10.88-4.012 3.209 3.209 0 0 1-1.126-2.439c0-4.217 3.413-7.592 7.631-7.592h8.762c4.219 0 7.619 3.375 7.619 7.592a3.2 3.2 0 0 1-1.125 2.438 16.702 16.702 0 0 1-10.881 4.013z"
+                            fill="#000000" opacity="1" data-original="#000000"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="product">
+        <div class="container">
+            <div class="product_header">
+                <h1 class="title">Products</h1>
+                <button onclick="onCheckout()">CheckOut</button>
+            </div>
+            <div class="product-inner">
+                <div class="item">
+                    <img src="./assets/Grilled halloumi salad.webp" height="400px" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Grilled halloumi salad</h3>
+                            <p>
+                                This grilled halloumi salad is a tasty, savory recipe! It's paired with fresh and juicy
+                                tomatoes and cucumbers for a crunchy vegetable bite.
+                                <br /><br />It's topped with salty, grilled halloumi cheese. I think you'll love it!
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Grilled halloumi salad', 30)">ADD TO CART ($30)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Roast radish and peanut salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Roast radish and peanut salad</h3>
+                            <p>
+                                This salad tastes amazing, the crispy, spicy radishes and crunchy peanuts with the tangy
+                                warm lemon dressing — every ingredient works well with the other.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Roast radish and peanut salad', 50)">ADD TO CART ($50)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Lime, feta and coriander sweetcorn.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Lime, feta and coriander sweetcorn</h3>
+                            <p>
+                                This fantastic and fresh corn feta salad recipe is a great simple side dish! You'll
+                                combine sweet corn, fresh herbs, jalapeno, and crumbly feta for a fantastic salad
+                                recipe.
+                                <br /><br />You don't even need to cook the corn as sweet corn can be eaten fresh. It's
+                                as simple as chopping a few ingredients and stirring them together.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Lime feta and coriander sweetcorn', 50)">ADD TO CART
+                                ($50)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Halloumi and watermelon salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Halloumi and watermelon salad</h3>
+                            <p>
+                                Warm, salty halloumi goes brilliantly here with sweet watermelon and fresh mint – ideal
+                                for a BBQ side dish.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Halloumi and watermelon salad', 55)">ADD TO CART ($55)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Za'atar cottage cheese salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Za'atar cottage cheese salad</h3>
+                            <p>
+                                This Cottage Cheese Salad with Za’atar is a recipe that was sent to me by a reader, and
+                                this was one of those must-make-again recipes from the first bite. If you don’t have the
+                                middle eastern spice mix called Za’atar, use any dried spices that you like on tomatoes.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Zaatar cottage cheese salad', 65)">ADD TO CART ($65)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Caprese salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Caprese salad</h3>
+                            <p>
+                                This caprese salad, with sweet tomatoes and creamy mozzarella, is full of fresh
+                                Mediterranean flavours and simple to whip up. Serve it with bread as a light, summery
+                                lunch, or as a side dish at dinner.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Caprese salad', 60)">ADD TO CART ($60)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Tex Mex-style sweetcorn salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Tex Mex-style sweetcorn salad</h3>
+                            <p>
+                                Sweet, crunchy, creamy and zingy – this vibrant salad is an explosion of flavours and
+                                textures. It's great served as a BBQ side or on its own with warm pittas for scooping.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Tex Mex-style sweetcorn salad', 40)">ADD TO CART ($40)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Healthy bean salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Healthy bean salad</h3>
+                            <p>
+                                This classic bean salad is perfect for picnics, barbecues and make ahead meals. To make
+                                it, we combine beans (canned or home cooked), onion, crisp cucumber, capers, parsley,
+                                and a tangy dressing. Easy and delicious!
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Healthy bean salad', 45)">ADD TO CART ($45)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./assets/Coronation chickpea and apple salad.webp" alt="">
+                    <div class="content">
+                        <div>
+                            <h3>Coronation chickpea and apple salad</h3>
+                            <p>
+                                Make this classic lunch favourite vegetarian by replacing the chicken with chickpeas.
+                                Refreshing, crunchy and filling, this easy salad is ready in just 20 minutes.
+                            </p>
+                        </div>
+                        <div>
+                            <button onclick="addToCart('Coronation chickpea and apple salad', 50)">ADD TO CART
+                                ($50)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-logo-com">
+            <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+            <a href="./home.html" class="logo">Fitness First</a>
+        </div>
+        <div class="footer-content">
+            <div class="sections">
+                <section class="sec">Sections</section>
+                <a href="./team.html">Team</a>
+                <a href="./feedback.html">Feedback</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./home.html#contact">Contact Us</a>
+            </div>
+            <div class="features">
+                <section class="fea">Features</section>
+                <a href="./shop.html">Shop Food</a>
+                <a href="./workout.html">Workout</a>
+                <a href="./healthy_recipe.html">Healthy Recipe</a>
+            </div>
+            <div class="features">
+                <section class="fea">Content</section>
+                <a href="./content_ST1.html">Student 1</a>
+                <a href="./content_ST2.html">Student 2</a>
+                <a href="./content_ST3.html">Student 3</a>
+                <a href="./content_ST4.html">Student 4</a>
+            </div>
+            <div class="features">
+                <section class="fea">Page Editor</section>
+                <a target="_blank" href="./pageEditor_ST1.html">Student 1</a>
+                <a target="_blank" href="./pageEditor_ST2.html">Student 2</a>
+                <a target="_blank" href="./pageEditor_ST3.html">Student 3</a>
+                <a target="_blank" href="./pageEditor_ST4.html">Student 4</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
