@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<title>Fitness First | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="assets/logo.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./style/home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+</link>
+
+<script src="script/home.js"></script>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-com">
+      <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+      <a href="./home.html" class="logo">Fitness First</a>
+    </div>
+    <div class="header-right">
+      <a id="header_home_menu" href="./home.html">Home</a>
+      <a id="header_shop_menu" href="./shop.html">Shop</a>
+      <a id="header_gallery_menu" href="./gallery.html">Gallary</a>
+      <a id="header_feedback_menu" href="./feedback.html">Feedback</a>
+      <a id="header_team_menu" href="./team.html">Team</a>
+      <a id="header_sitemap_menu" href="./sitemap.html">Site-Map</a>
+      <a id="header_checkout_menu" href="./checkout.html">
+        Cart
+        <svg class="cart_icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0" y="0" viewBox="0 0 16 16"
+          style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+          <g>
+            <text id="item_count" x="12" y="7" font-size="7px" font-weight="bold" text-anchor="middle"
+              fill="#000000">0</text>
+            <circle cx="6.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+            <circle cx="11.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+            <path
+              d="M8.051 4H3.342l-.184-.829A1.487 1.487 0 0 0 1.697 2H.5a.5.5 0 0 0 0 1h1.197c.234 0 .434.16.484.389l1.656 7.438c.155.69.757 1.173 1.465 1.173h7.444c.666 0 1.259-.447 1.442-1.088l1.122-3.926A4.457 4.457 0 0 1 12.5 8c-2.31 0-4.197-1.756-4.449-4z"
+              fill="#000000" opacity="1" data-original="#000000"></path>
+          </g>
+        </svg>
+      </a>
+      <a id="header_userProfile_menu" href="./userProfile.html">
+        User Profile
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="30"
+          height="30" x="0" y="0" viewBox="0 0 45.532 45.532" style="enable-background:new 0 0 512 512"
+          xml:space="preserve">
+          <g>
+            <path
+              d="M22.766.001C10.194.001 0 10.193 0 22.766s10.193 22.765 22.766 22.765c12.574 0 22.766-10.192 22.766-22.765S35.34.001 22.766.001zm0 6.807a7.53 7.53 0 1 1 .001 15.06 7.53 7.53 0 0 1-.001-15.06zm-.005 32.771a16.708 16.708 0 0 1-10.88-4.012 3.209 3.209 0 0 1-1.126-2.439c0-4.217 3.413-7.592 7.631-7.592h8.762c4.219 0 7.619 3.375 7.619 7.592a3.2 3.2 0 0 1-1.125 2.438 16.702 16.702 0 0 1-10.881 4.013z"
+              fill="#000000" opacity="1" data-original="#000000"></path>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 display-container grayscale-min" id="home">
+    <div class="text-white display-left">
+      <span class="jumbo jumbo-title hide-small">Do
+        You Want to be <div style="margin-top:-20px;">Fitness First?
+        </div></span><br>
+      <span class="xxlarge w3-hide-large hide-medium text-blue" style="margin-top:80px;">Do You
+        Want To
+        <div class="text-blue">be </div>
+        <div class="text-blue">Fitness First?</div>
+      </span><br>
+      <p class="w3-hide-large hide-medium hide-medium-font">You can
+        Register Yourself Now to access new features provided by Fitness First.<br> Fitness First provides fast
+        and secure platform for user to shop online.<br>Fitness First provides health service to notify the user
+        about their fitness.<br>Fitness First supports Feedback System.<br> Fitness First provides News about
+        healthy recepies.</p>
+
+      <p class="hide-small hide-small-font">You can Register
+        Yourself Now to access new features provided by Fitness First.<br> Fitness First provides fast and
+        secure platform
+        for user to shop online.<br>Fitness First provides health service to notify the user about their
+        fitness.<br>
+        Fitness First supports Feedback System.<br> Fitness First provides News about healthy recepies.</p>
+
+      <p>
+        <button class="button-yellow butto-yellow-hover text-large" onclick="getDietPlan()"
+          style="background-color:dodgerblue; color:white; margin-left:15px; border-radius: 10px; width: auto;">Get Diet
+          Plan</button>
+      </p>
+    </div>
+  </header>
+
+  <div class="container main-style" id="about">
+    <h3 class="text-center">Our Mission</h3>
+    <div class="flex-box">
+      <img src="assets/mission.png" alt="mission">
+      <p class="text-center text-large"><b>Giving free, easily accessible workout plans, scrumptious and
+          nourishing
+          meals,
+          and professional fitness guidance to enable everyone to live a healthier, happier life.</b></p>
+    </div>
+  </div>
+
+  <div class="container main-style" id="Features">
+    <h3 class="text-center">Our Features</h3>
+    <div class="row-padding text-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <img class="w3-margin-bottom jumbo text-center" src="./assets/workout.png" alt="workout" />
+        <p class="text-large">WORKOUT</p>
+        <p>You don't need a gym or fancy equipment to build muscle and get stronger.</p>
+        <button class="button-yellow butto-yellow-hover padding-large  text-large"
+          style="background-color:rgb(241, 213, 88); color:black; margin-left:30px;width: auto;"
+          onclick="window.location.href = './workout.html'">Read
+          More</button>
+      </div>
+      <div class="w3-quarter">
+        <img class="w3-margin-bottom jumbo text-center" src="./assets/recipe.png" alt="recipe">
+        <p class="text-large">HEALTHY RECIPES
+        </p>
+        <p>Looking for a few new healthy recipes to add to your weekly rotation ?</p>
+        <button class="button-yellow butto-yellow-hover padding-large  text-large"
+          style="background-color:rgb(241, 213, 88); color:black; margin-left:30px;width: auto;"
+          onclick="window.location.href = './healthy_recipe.html'">Read
+          More</button>
+      </div>
+      <div class="w3-quarter">
+        <img class="w3-margin-bottom jumbo text-center" src="./assets/shop.png" alt="shop">
+        <p class="text-large">SHOP</p>
+        <p>You can buy healthy salads as per your need. For healthy life.</p>
+        <button class="button-yellow butto-yellow-hover padding-large  text-large"
+          onclick="window.location.href = './shop.html'"
+          style="background-color:rgb(241, 213, 88); color:black; margin-left:30px;width: auto;">Read
+          More</button>
+      </div>
+      <div class="w3-quarter">
+        <img class="w3-margin-bottom jumbo text-center" src="./assets/easy.png" alt="easy">
+        <p class="text-large">Content Page</p>
+        <p>Content Page for know about the website theme and topic. It show the details related to website</p>
+        <button class="button-yellow butto-yellow-hover padding-large  text-large"
+          style="background-color:rgb(241, 213, 88); color:black; margin-left:30px;width: auto;"
+          onclick="window.location.href = './content_ST1.html'">Read
+          More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container contact" id="contact">
+    <h3 class="text-center">CONTACT US</h3>
+    <p class="text-center text-large">Lets get in touch. Send us a request, we will get back to you:</p>
+    <div style="margin-top:30px">
+      <p><i class="fa fa-map-marker fa-fw xlarge w3-margin-right"></i> London, UK</p>
+      <p><i class="fa fa-phone fa-fw xlarge w3-margin-right"></i> Phone: +44 2071838750&nbsp +44 02030484377
+      </p>
+      <p><i class="fa fa-envelope fa-fw xlarge w3-margin-right"> </i> Email: mail@fitnessfirst.com</p>
+      <br>
+      <form action="#" method="post">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+        <p><input class="w3-input w3-border" type="date" placeholder="Date" name="Date" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+        <p>
+        <div class="text-center">
+          <button class="w3-button text-center w3-black" type="submit" name="btnsend_request">
+            <i class="fa fa-paper-plane"></i> SEND REQUEST
+          </button>
+        </div>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-logo-com">
+      <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+      <a href="./home.html" class="logo">Fitness First</a>
+    </div>
+    <div class="footer-content">
+      <div class="sections">
+        <section class="sec">Sections</section>
+        <a href="./team.html">Team</a>
+        <a href="./feedback.html">Feedback</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./home.html#contact">Contact Us</a>
+      </div>
+      <div class="features">
+        <section class="fea">Features</section>
+        <a href="./shop.html">Shop Food</a>
+        <a href="./workout.html">Workout</a>
+        <a href="./healthy_recipe.html">Healthy Recipe</a>
+      </div>
+      <div class="features">
+        <section class="fea">Content</section>
+        <a href="./content_ST1.html">Student 1</a>
+        <a href="./content_ST2.html">Student 2</a>
+        <a href="./content_ST3.html">Student 3</a>
+        <a href="./content_ST4.html">Student 4</a>
+      </div>
+      <div class="features">
+        <section class="fea">Page Editor</section>
+        <a target="_blank" href="./pageEditor_ST1.html">Student 1</a>
+        <a target="_blank" href="./pageEditor_ST2.html">Student 2</a>
+        <a target="_blank" href="./pageEditor_ST3.html">Student 3</a>
+        <a target="_blank" href="./pageEditor_ST4.html">Student 4</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

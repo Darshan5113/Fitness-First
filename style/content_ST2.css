@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header h4 {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+  color: #333;
+  border-radius: 5px;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #333;
+}
+
+section p {
+  color: #666;
+}
+
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#goToTopBtn:hover {
+  background-color: #555;
+}
+
+footer {
+  height: 100px;
+}
+
+.container button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-com {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+.header {
+  padding: 0px 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 9px;
+}
+
+.header a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_checkout_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_checkout_menu svg {
+  margin-left: 5px;
+}
+
+.header-right #header_userProfile_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_userProfile_menu svg {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 830px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .header-right #header_checkout_menu {
+    justify-content: center;
+  }
+
+  .header-right #header_userProfile_menu {
+    justify-content: center;
+  }
+
+  .header a {
+    width: 100%;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+
+.footer-logo-com {
+  display: flex;
+  justify-content: left;
+}
+
+.footer {
+  padding: 10px 30px;
+  margin-top: 20px;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.footer a.logo {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.sections,
+.features {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.sections a {
+  padding: 5px 0px;
+  margin-left: 10px;
+}
+
+.sections section.sec {
+  font-weight: bold;
+  margin-left: 0px;
+  padding: 8px 0px;
+}
+
+.features a {
+  padding: 5px 0px;
+  margin-left: 10px;
+}
+
+.features section.fea {
+  font-weight: bold;
+  margin-left: 0px;
+  padding: 8px 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .sections,
+  .features {
+    display: flex;
+    flex-direction: column;
+    margin-left: 73px;
+  }
+}
