@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+
+:root {
+  --big: "Merriweather", serif;
+  --white: #ffffff;
+  --primary: #f2dad7;
+  --secondary: #d1a39e;
+  --light: #cecdca;
+  --dark: #474545;
+  --ease: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: var(--big);
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+#portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio {
+    display: block;
+  }
+
+  .project {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 250px;
+  }
+
+  .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+  }
+
+  .project p,
+  .project .grid__title {
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+.project {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+}
+
+.project img {
+  position: absolute;
+  opacity: 0.9;
+}
+
+.project p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.project .grid__title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  bottom: 0;
+  font-weight: 100;
+  font-size: 0.8em;
+  z-index: 3;
+  text-transform: uppercase;
+  color: var(--dark);
+  letter-spacing: 2px;
+}
+
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+.grid__overlay {
+  background: rgba(20, 20, 20, 0.9);
+  height: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(101%);
+  transition: var(--ease);
+}
+
+.grid__overlay button {
+  background: none;
+  outline: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.grid__overlay button:hover {
+  background: var(--white);
+  color: var(--secondary);
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  background: rgba(20, 20, 20, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: var(--white);
+  width: 90%;
+  max-width: 700px;
+  max-height: 80%;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.overlay__inner img {
+  width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: var(--dark);
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.close:hover {
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .overlay__inner {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+.project__image {
+  display: flex;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-com {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+.header {
+  padding: 0px 30px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 9px;
+}
+
+.header a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_checkout_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_checkout_menu svg {
+  margin-left: 5px;
+}
+
+.header-right #header_userProfile_menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-right #header_userProfile_menu svg {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 830px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .header-right #header_checkout_menu {
+    justify-content: center;
+  }
+
+  .header-right #header_userProfile_menu {
+    justify-content: center;
+  }
+
+  .header a {
+    width: 100%;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+
+.footer-logo-com {
+  display: flex;
+  justify-content: left;
+}
+
+.footer {
+  padding: 10px 30px;
+  margin-top: 20px;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: black;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.footer a.logo {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.sections,
+.features {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.sections a {
+  padding: 5px 0px;
+  margin-left: 10px;
+}
+
+.sections section.sec {
+  font-weight: bold;
+  margin-left: 0px;
+  padding: 8px 0px;
+}
+
+.features a {
+  padding: 5px 0px;
+  margin-left: 10px;
+}
+
+.features section.fea {
+  font-weight: bold;
+  margin-left: 0px;
+  padding: 8px 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .sections,
+  .features {
+    display: flex;
+    flex-direction: column;
+    margin-left: 73px;
+  }
+}
