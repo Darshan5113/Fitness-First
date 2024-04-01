@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<title>Fitness First | Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+</link>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="./style/userProfile.css">
+
+<script src="./script/userProfile.js"></script>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-com">
+            <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+            <a href="./home.html" class="logo">Fitness First</a>
+        </div>
+        <div class="header-right">
+            <a id="header_home_menu" href="./home.html">Home</a>
+            <a id="header_shop_menu" href="./shop.html">Shop</a>
+            <a id="header_gallery_menu" href="./gallery.html">Gallary</a>
+            <a id="header_feedback_menu" href="./feedback.html">Feedback</a>
+            <a id="header_team_menu" href="./team.html">Team</a>
+            <a id="header_sitemap_menu" href="./sitemap.html">Site-Map</a>
+            <a id="header_checkout_menu" href="./checkout.html">
+                Cart
+                <svg class="cart_icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0" y="0" viewBox="0 0 16 16"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                    <g>
+                        <text id="item_count" x="12" y="7" font-size="7px" font-weight="bold" text-anchor="middle"
+                            fill="#000000">0</text>
+                        <circle cx="6.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+                        <circle cx="11.5" cy="14.5" r="1.5" fill="#000000" opacity="1" data-original="#000000"></circle>
+                        <path
+                            d="M8.051 4H3.342l-.184-.829A1.487 1.487 0 0 0 1.697 2H.5a.5.5 0 0 0 0 1h1.197c.234 0 .434.16.484.389l1.656 7.438c.155.69.757 1.173 1.465 1.173h7.444c.666 0 1.259-.447 1.442-1.088l1.122-3.926A4.457 4.457 0 0 1 12.5 8c-2.31 0-4.197-1.756-4.449-4z"
+                            fill="#000000" opacity="1" data-original="#000000"></path>
+                    </g>
+                </svg>
+            </a>
+            <a id="header_userProfile_menu" href="./profile.html">
+                User Profile
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30" height="30" x="0" y="0" viewBox="0 0 45.532 45.532"
+                    style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M22.766.001C10.194.001 0 10.193 0 22.766s10.193 22.765 22.766 22.765c12.574 0 22.766-10.192 22.766-22.765S35.34.001 22.766.001zm0 6.807a7.53 7.53 0 1 1 .001 15.06 7.53 7.53 0 0 1-.001-15.06zm-.005 32.771a16.708 16.708 0 0 1-10.88-4.012 3.209 3.209 0 0 1-1.126-2.439c0-4.217 3.413-7.592 7.631-7.592h8.762c4.219 0 7.619 3.375 7.619 7.592a3.2 3.2 0 0 1-1.125 2.438 16.702 16.702 0 0 1-10.881 4.013z"
+                            fill="#000000" opacity="1" data-original="#000000"></path>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="profileCompletion" id="profileCompletion">
+        <label for="progress" id="progressLabel">Profile Completion (0%)</label>
+        <progress id="progress" value="0" max="11"></progress>
+    </div>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-25">
+                <label id="main_head">Personal Detail: 1/5</label>
+            </div>
+        </div>
+        <div id="first">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onFirstSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="second" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onSecondSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="third" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email Id</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" placeholder="abc@example.com" required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onThirdSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="forth" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="mobile">Mobile No</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="mobile" name="mobile" placeholder="+XX XXXXXXXXXX" required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onForthSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="fifth" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="gender">Gender</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="gender" name="gender" placeholder="Male/Female" required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onFifthSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="street" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="street">Street/Building</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="streetAdd" name="street" placeholder="Your street..." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onStreetSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="landmark" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="landmark">Your Landmark</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="landmarkAdd" name="landmark" placeholder="Your landmark..." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onLandmarkSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="city" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="city">Your City</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="cityAdd" name="city" placeholder="Your city..." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onCitySubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="pincode" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="pincode">Your Pincode</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="Addpincode" name="pincode" placeholder="Your pincode..." required>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onPincodeSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="daySelection" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="dayselection">Your Prefere Day for Delivery</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" id="mon-fri" name="prefere_day" value="Monday - Friday" checked>
+                    <label for="mon-fri">Monday - Friday</label><br>
+                    <input type="radio" id="satur-sun" name="prefere_day" value="Saturday, Sunday">
+                    <label for="satur-sun">Saturday, Sunday</label><br>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onPrefereDaySubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="timeSelection" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="timeselection">Your Prefere Time for Delivery</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" id="mor" name="prefere_time" value="Monring 9:00 AM to Evening 6:00 PM" checked>
+                    <label for="mor">Monring 9:00 AM to Evening 6:00 PM</label><br>
+                    <input type="radio" id="eve" name="prefere_time" value="Evening 6:00 PM to Evening 9:00 PM">
+                    <label for="eve">Evening 6:00 PM to Evening 9:00 PM</label><br>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onPrefereTimeSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+        <div id="UrgentDeliverySelection" hidden>
+            <div class="row">
+                <div class="col-25">
+                    <label for="UrgentDeliverySelection">Your Prefere Delivery Mode</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" id="urgent" name="prefere_mode" value="URGENT DELIVERY" checked>
+                    <label for="urgent">URGENT Delivery</label><br>
+                    <input type="radio" id="normal" name="prefere_mode" value="NORMAL DELIVERY">
+                    <label for="normal">NORMAL Delivery</label><br>
+                </div>
+            </div>
+            <div class="row row_btn">
+                <button onclick="onPrefereModeSubmit()" type="submit" value="Submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail_component" id="detail_component" hidden>
+        <div class="row heading">
+            <div class="col-25">
+                <label id="main_head">Personal Detail:</label>
+            </div>
+        </div>
+        <div>
+            <div class="row details">
+                <div class="col-100">
+                    <label>First Name: </label><label id="res_fname"></label>
+                </div>
+                <div class="col-100">
+                    <label>Last Name: </label><label id="res_lname"></label>
+                </div>
+                <div class="col-100">
+                    <label>Email Id: </label><label id="res_email"></label>
+                </div>
+                <div class="col-100">
+                    <label>Mobile No: </label><label id="res_mobile"></label>
+                </div>
+                <div class="col-100">
+                    <label>Gender: </label><label id="res_gender"></label>
+                </div>
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label id="main_head">Address Detail:</label>
+            </div>
+        </div>
+        <div>
+            <div class="row details">
+                <div class="col-100">
+                    <label>Street/Building: </label><label id="res_street_building"></label>
+                </div>
+                <div class="col-100">
+                    <label>Landmark: </label><label id="res_landmark"></label>
+                </div>
+                <div class="col-100">
+                    <label>City: </label><label id="res_city"></label>
+                </div>
+                <div class="col-100">
+                    <label>Pincode: </label><label id="res_pincode"></label>
+                </div>
+            </div>
+        </div>
+        <div class="row heading">
+            <div class="col-25">
+                <label id="main_head">Preference Detail:</label>
+            </div>
+        </div>
+        <div>
+            <div class="row details">
+                <div class="col-100">
+                    <label>Prefered Day: </label><label id="res_preday"></label>
+                </div>
+                <div class="col-100">
+                    <label>Prefered Time: </label><label id="res_pretime"></label>
+                </div>
+                <div class="col-100">
+                    <label>Prefere Mode: </label><label id="res_premode"></label>
+                </div>
+            </div>
+        </div>
+        <div class="reseBtnContainer">
+            <button type="button" name="reset" onclick="ClearUserProfile()">
+                Reset User Profile
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-logo-com">
+            <img src="./assets/logo.png" width="60px" height="60px" alt="Fitness First" />
+            <a href="./home.html" class="logo">Fitness First</a>
+        </div>
+        <div class="footer-content">
+            <div class="sections">
+                <section class="sec">Sections</section>
+                <a href="./team.html">Team</a>
+                <a href="./feedback.html">Feedback</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./home.html#contact">Contact Us</a>
+            </div>
+            <div class="features">
+                <section class="fea">Features</section>
+                <a href="./shop.html">Shop Food</a>
+                <a href="./workout.html">Workout</a>
+                <a href="./healthy_recipe.html">Healthy Recipe</a>
+            </div>
+            <div class="features">
+                <section class="fea">Content</section>
+                <a href="./content_ST1.html">Student 1</a>
+                <a href="./content_ST2.html">Student 2</a>
+                <a href="./content_ST3.html">Student 3</a>
+                <a href="./content_ST4.html">Student 4</a>
+            </div>
+            <div class="features">
+                <section class="fea">Page Editor</section>
+                <a target="_blank" href="./pageEditor_ST1.html">Student 1</a>
+                <a target="_blank" href="./pageEditor_ST2.html">Student 2</a>
+                <a target="_blank" href="./pageEditor_ST3.html">Student 3</a>
+                <a target="_blank" href="./pageEditor_ST4.html">Student 4</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
